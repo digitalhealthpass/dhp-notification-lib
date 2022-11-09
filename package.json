@@ -1,0 +1,37 @@
+{
+  "name": "healthpass-notification",
+  "version": "1.0.0",
+  "description": "Utility provides support for SMS and Email Notification for Registration and Upload Test Result use cases ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:digitalhealthpass/dhp-notification-lib"
+  },
+  "keywords": [
+    "notification"
+  ],
+  "author": "",
+  "dependencies": {
+    "@sendgrid/mail": "^7.4.0",
+    "aws-sdk": "^2.1046.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "log4js": "^6.3.0",
+    "nodemailer": "^6.4.16",
+    "pug": "^3.0.1",
+    "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.5"
+  }
+}
