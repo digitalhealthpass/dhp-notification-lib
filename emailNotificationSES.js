@@ -5,7 +5,6 @@
  *
  * SPDX-Licence-Identifier: Apache 2.0
  */
-const { promisify } = require('util')
 const aws = require('aws-sdk');
 const REGION = process.env.AWS_REGION;
 // AWS_ACCESS_KEY_ID & AWS_SECRET_ACCESS_KEY must be in env
@@ -14,12 +13,13 @@ const senderEmailID = process.env.SENDER_EMAIL_ID;
 const charset = "UTF-8";
 
 exports.sendEmail = async (
-    toEmailID, 
-    message, 
+    toEmailID,
+    message,
     connectTimeout,
     timeout,
     maxRetries,
-    retryDelay) => {
+    retryDelay
+) => {
     let options = {
         apiVersion: '2010-12-01',
         httpOptions: {
@@ -32,10 +32,10 @@ exports.sendEmail = async (
         }
     };
     var params = {
-        Destination: { 
+        Destination: {
             ToAddresses: [
-            toEmailID,
-          ]
+                toEmailID,
+            ]
         },
         Message: {
             Subject: {
@@ -54,7 +54,7 @@ exports.sendEmail = async (
             }
         },
         Source: senderEmailID
-      };
-      
+    };
+
     return await new aws.SES(options).sendEmail(params).promise();
 }

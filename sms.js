@@ -66,7 +66,7 @@ exports.sendSMSMessage =
             'Message': smsMessageStr,
             'PhoneNumber': toPhoneNo
         }
-    
+
         const options = {
             apiVersion: '2010-03-31',
             httpOptions: {
